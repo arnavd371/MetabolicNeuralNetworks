@@ -1,0 +1,8 @@
+torch>=2.1
+torchvision
+numpy
+scipy
+matplotlib
+pandas
+tabulate
+kaggle  # only for build_kernels.py / pushing kernels

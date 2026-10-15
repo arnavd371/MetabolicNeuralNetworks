@@ -1,0 +1,5 @@
+kaggle/
+data/
+__pycache__/
+*.pyc
+scripts/figures/
