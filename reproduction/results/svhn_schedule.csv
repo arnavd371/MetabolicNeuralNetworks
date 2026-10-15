@@ -1,0 +1,4 @@
+phase,digits,n_samples,steps_per_epoch,epochs,phase_start,phase_end,epoch0_start,epoch0_end,epoch0_checks
+Easy,0 1 8 9,28513,223,5,1,1115,1,223,150
+Medium,0 1 8 9 2 7,44693,350,5,1116,2865,1116,1465,1200 1350
+Hard,0 1 2 3 4 5 6 7 8 9,73257,573,10,2866,8595,2866,3438,3000 3150 3300

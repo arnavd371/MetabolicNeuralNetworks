@@ -1,0 +1,101 @@
+{
+ "python": "3.13.15",
+ "torch": "2.11.0+cu128",
+ "torchvision": "0.26.0+cu128",
+ "numpy": "2.1.3",
+ "scipy": "1.16.3",
+ "cuda": "12.8",
+ "cudnn": 91900,
+ "gpu": "Tesla T4",
+ "nvidia_smi": "Tesla T4, 580.178.04, 15360 MiB\nTesla T4, 580.178.04, 15360 MiB"
+}
+Device: cuda  AMP: True
+── Smoke test (synthetic, tiny) ─────────────────────────────
+  deaths 10  births 0  alive 6
+  AMP ON
+  stats self-test: p=0.0000  d=3.42  bootstrap CI=[2.52,6.00]
+  OK — all code paths executed.
+
+
+── Exp 1: Shift Detection [cifar10 / batch1] ─────────────────────────
+  seed  42  easy→med    7  med→hard   18  acc 74.1%
+  seed   7  easy→med    2  med→hard   28  acc 75.3%
+  seed 123  easy→med    4  med→hard   34  acc 75.3%
+  seed   0  easy→med    0  med→hard   31  acc 75.1%
+  seed  99  easy→med    8  med→hard   24  acc 76.0%
+  seed  11  easy→med    9  med→hard   18  acc 74.8%
+  seed  22  easy→med   15  med→hard   20  acc 77.2%
+  seed  33  easy→med    6  med→hard   34  acc 74.2%
+  seed  44  easy→med    8  med→hard   39  acc 76.5%
+  seed  55  easy→med    1  med→hard   22  acc 76.0%
+
+  Easy→Medium  6.0 ± 4.2
+  Medium→Hard  26.8 ± 7.1
+  Ratio        4.47×   bootstrap 95% CI [2.78, 8.11]  (median 4.49)
+  Consistent   10/10 seeds (hard > easy)
+  Paired t     t=6.653  p=0.0001
+  Wilcoxon     p=0.0020
+  Cohen's d    2.104
+  Shapiro-Wilk on differences: p=0.1488  (normal-ish, trust t-test)
+  Accuracy     75.44 ± 0.92%
+
+
+── Exp 1: Shift Detection [cifar10 / batch2] ─────────────────────────
+  seed 100  easy→med   12  med→hard   24  acc 78.0%
+  seed 101  easy→med    0  med→hard   29  acc 76.7%
+  seed 102  easy→med    4  med→hard   25  acc 74.8%
+  seed 103  easy→med    2  med→hard   23  acc 76.8%
+  seed 104  easy→med    0  med→hard   46  acc 74.4%
+  seed 105  easy→med    0  med→hard   33  acc 77.7%
+  seed 106  easy→med   13  med→hard   25  acc 77.1%
+  seed 107  easy→med    0  med→hard   35  acc 74.1%
+  seed 108  easy→med    7  med→hard   32  acc 74.8%
+  seed 109  easy→med    4  med→hard   16  acc 74.4%
+
+  Easy→Medium  4.2 ± 4.7
+  Medium→Hard  28.8 ± 7.8
+  Ratio        6.86×   bootstrap 95% CI [3.57, 20.80]  (median 6.95)
+  Consistent   10/10 seeds (hard > easy)
+  Paired t     t=6.857  p=0.0001
+  Wilcoxon     p=0.0020
+  Cohen's d    2.168
+  Shapiro-Wilk on differences: p=0.3916  (normal-ish, trust t-test)
+  Accuracy     75.88 ± 1.43%
+
+
+── Meta-analysis across 2 batches [cifar10] ──────
+  batch 'batch1': n=10  p=0.0001  d=2.104  ratio=4.47×
+  batch 'batch2': n=10  p=0.0001  d=2.168  ratio=6.86×
+
+  Stouffer combined z = 5.565, p_combined = 0.00000  (total n=20)
+  Pooled paired test (all 20 seeds as one sample):
+    t=9.633  p=0.0000  Wilcoxon p=0.0001  d=2.154
+  Pooled ratio = 5.45×  bootstrap 95% CI [3.64, 9.25]
+  This is the number to lead with in the paper: it reflects all 20 seeds across 2 independent runs.
+
+Figures saved:
+  ./figures/fig1_bursts_cifar10_batch1.png
+  ./figures/fig1_bursts_cifar10_batch2.png
+
+======================================================================
+RESULTS SUMMARY — Exp 1: Shift Detection via Reorganization Bursts
+======================================================================
+
+[cifar10_batch1]  n=10 seeds
+  Easy→Med 6.0±4.2   Med→Hard 26.8±7.1
+  ratio 4.47×  CI[2.78,8.11]  consistent 10/10
+  t-test p=0.0001  Wilcoxon p=0.0020  d=2.104  Shapiro p=0.1488
+
+[cifar10_batch2]  n=10 seeds
+  Easy→Med 4.2±4.7   Med→Hard 28.8±7.8
+  ratio 6.86×  CI[3.57,20.80]  consistent 10/10
+  t-test p=0.0001  Wilcoxon p=0.0020  d=2.168  Shapiro p=0.3916
+
+[META across batches | cifar10]  total n=20 (2 batches)
+  Stouffer combined p = 0.00000
+  Pooled paired test: p=0.0000  Wilcoxon p=0.0001  d=2.154
+  Pooled ratio 5.45×  CI[3.64,9.25]
+
+======================================================================
+[part1 wall time 1704s]
+DONE part1

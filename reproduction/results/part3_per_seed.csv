@@ -1,0 +1,11 @@
+curriculum,rate_mode,seed,acc,total_steps,seconds,td_Easy,td_Medium,td_Hard,alive_end_Easy,alive_end_Medium,alive_end_Hard
+original,binary,42,74.41,5870,31.6,62,8,24,77,41,43
+original,binary,7,77.07,5870,30.7,67,1,22,67,38,31
+original,binary,123,75.16,5870,30.6,54,3,35,73,56,42
+original,binary,0,76.01,5870,30.6,71,0,38,56,54,45
+original,binary,99,75.48,5870,30.7,53,2,19,88,35,40
+original,binary,11,76.26,5870,30.6,71,8,23,74,38,29
+original,binary,22,76.38,5870,30.7,65,11,25,77,42,60
+original,binary,33,77.46,5870,30.7,46,6,33,87,47,45
+original,binary,44,76.35,5870,30.6,71,8,32,67,47,53
+original,binary,55,75.86,5870,30.7,55,2,29,77,50,58
