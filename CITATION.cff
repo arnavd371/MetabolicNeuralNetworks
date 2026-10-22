@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or results, please cite the paper below."
+title: "MetabolicNeuralNetworks"
+repository-code: "https://github.com/arnavd371/MetabolicNeuralNetworks"
+authors:
+  - family-names: Dhiman
+    given-names: "TODO"
+  - family-names: Makhambetaliyeva
+    given-names: "TODO"
+preferred-citation:
+  type: article
+  title: "Metabolic Neural Networks: Exact Local Pruning from Neuron Activation Rates and the Limits of Burst-Based Shift Detection"
+  authors:
+    - family-names: Dhiman
+      given-names: "TODO"
+    - family-names: Makhambetaliyeva
+      given-names: "TODO"
+  year: 2026
+  # TODO: add identifiers once available, e.g.
+  # identifiers:
+  #   - type: other
+  #     value: "arXiv:TODO"
+  # url: "TODO"
