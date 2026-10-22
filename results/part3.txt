@@ -1,0 +1,23 @@
+{
+ "python": "3.13.15",
+ "torch": "2.11.0+cu128",
+ "torchvision": "0.26.0+cu128",
+ "numpy": "2.1.3",
+ "scipy": "1.16.3",
+ "cuda": "12.8",
+ "cudnn": 91900,
+ "gpu": "Tesla T4",
+ "nvidia_smi": "Tesla T4, 580.178.04, 15360 MiB\nTesla T4, 580.178.04, 15360 MiB"
+}
+Device: cuda  AMP: True
+  [part3] original         binary seed  42  td={'Easy': 62, 'Medium': 8, 'Hard': 24}  acc 74.4%  (32s)
+  [part3] original         binary seed   7  td={'Easy': 67, 'Medium': 1, 'Hard': 22}  acc 77.1%  (31s)
+  [part3] original         binary seed 123  td={'Easy': 54, 'Medium': 3, 'Hard': 35}  acc 75.2%  (31s)
+  [part3] original         binary seed   0  td={'Easy': 71, 'Medium': 0, 'Hard': 38}  acc 76.0%  (31s)
+  [part3] original         binary seed  99  td={'Easy': 53, 'Medium': 2, 'Hard': 19}  acc 75.5%  (31s)
+  [part3] original         binary seed  11  td={'Easy': 71, 'Medium': 8, 'Hard': 23}  acc 76.3%  (31s)
+  [part3] original         binary seed  22  td={'Easy': 65, 'Medium': 11, 'Hard': 25}  acc 76.4%  (31s)
+  [part3] original         binary seed  33  td={'Easy': 46, 'Medium': 6, 'Hard': 33}  acc 77.5%  (31s)
+  [part3] original         binary seed  44  td={'Easy': 71, 'Medium': 8, 'Hard': 32}  acc 76.3%  (31s)
+  [part3] original         binary seed  55  td={'Easy': 55, 'Medium': 2, 'Hard': 29}  acc 75.9%  (31s)
+DONE part3
