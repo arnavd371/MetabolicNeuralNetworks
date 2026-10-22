@@ -1,0 +1,16 @@
+# datasets downloaded by torchvision (CIFAR-10, SVHN)
+data/
+# Python
+__pycache__/
+*.pyc
+# Kaggle kernel builds (scripts/build_kernels.py)
+kaggle/
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.bbl
+*.blg
