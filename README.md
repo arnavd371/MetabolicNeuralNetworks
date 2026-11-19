@@ -105,6 +105,10 @@ cd .. && python scripts/analyze.py results                   # CPU, seconds
   - SVHN reverses on the original metric (0.50×, p = 2.0e-7).
   - The Fisher-vs-rate correlation is rho = +0.271 (one-sample p = 0.00246, 10 seeds), not 0.17 and non-significant.
 
+## License
+
+Code is released under the [MIT License](LICENSE).
+
 ## Citation
 
 See [CITATION.cff](CITATION.cff).
