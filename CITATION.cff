@@ -4,17 +4,13 @@ title: "MetabolicNeuralNetworks"
 repository-code: "https://github.com/arnavd371/MetabolicNeuralNetworks"
 authors:
   - family-names: Dhiman
-    given-names: "TODO"
-  - family-names: Makhambetaliyeva
-    given-names: "TODO"
+    given-names: Arnav
 preferred-citation:
   type: article
   title: "Metabolic Neural Networks: Exact Local Pruning from Neuron Activation Rates and the Limits of Burst-Based Shift Detection"
   authors:
     - family-names: Dhiman
-      given-names: "TODO"
-    - family-names: Makhambetaliyeva
-      given-names: "TODO"
+      given-names: Arnav
   year: 2026
   # TODO: add identifiers once available, e.g.
   # identifiers:
