@@ -93,7 +93,7 @@ cd .. && python scripts/analyze.py results                   # CPU, seconds
 
 ## Paper
 
-*Metabolic Neural Networks: Exact Local Pruning from Neuron Activation Rates and the Limits of Burst-Based Shift Detection* (Arnav Dhiman, 2026). The LaTeX source is not yet in this repository; it will be added under `paper/`.
+Paper by Arnav Dhiman (2026); title withheld while the paper is under double-blind review, to be restored after decisions on December 5, 2026. The LaTeX source is not yet in this repository; it will be added under `paper/`.
 
 ## Known limitations
 
@@ -115,7 +115,7 @@ See [CITATION.cff](CITATION.cff).
 
 ```bibtex
 @article{dhiman2026metabolic,
-  title  = {Metabolic Neural Networks: Exact Local Pruning from Neuron Activation Rates and the Limits of Burst-Based Shift Detection},
+  title  = {TODO: title withheld during double-blind review},
   author = {Dhiman, Arnav},
   year   = {2026},
   note   = {TODO: arXiv identifier},
