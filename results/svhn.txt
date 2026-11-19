@@ -1,0 +1,70 @@
+{
+ "python": "3.13.15",
+ "torch": "2.11.0+cu128",
+ "torchvision": "0.26.0+cu128",
+ "numpy": "2.1.3",
+ "scipy": "1.16.3",
+ "cuda": "12.8",
+ "cudnn": 91900,
+ "gpu": "Tesla T4",
+ "nvidia_smi": "Tesla T4, 580.178.04, 15360 MiB\nTesla T4, 580.178.04, 15360 MiB"
+}
+Device: cuda  AMP: True
+SVHN train class counts (digit: n): {0: 4948, 1: 13861, 2: 10585, 3: 8497, 4: 7458, 5: 6882, 6: 5727, 7: 5595, 8: 5045, 9: 4659}
+  Easy   digits [0, 1, 8, 9]  n=28513  steps/epoch=223  epoch0 steps 1-223  checks in epoch0: [150]
+  Medium digits [0, 1, 8, 9, 2, 7]  n=44693  steps/epoch=350  epoch0 steps 1116-1465  checks in epoch0: [1200, 1350]
+  Hard   digits [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  n=73257  steps/epoch=573  epoch0 steps 2866-3438  checks in epoch0: [3000, 3150, 3300]
+
+── Exp 1: Shift Detection [svhn / svhn_b1b2] ─────────────────────────
+  seed  42  easy→med   48  med→hard   31  acc 91.4%
+  seed   7  easy→med   34  med→hard   27  acc 91.0%
+  seed 123  easy→med   48  med→hard   32  acc 91.1%
+  seed   0  easy→med   43  med→hard   10  acc 91.4%
+  seed  99  easy→med   41  med→hard   33  acc 91.2%
+  seed  11  easy→med   32  med→hard   34  acc 91.1%
+  seed  22  easy→med   35  med→hard   24  acc 90.6%
+  seed  33  easy→med   34  med→hard    4  acc 90.9%
+  seed  44  easy→med   50  med→hard    8  acc 90.7%
+  seed  55  easy→med   40  med→hard   15  acc 91.1%
+  seed 100  easy→med   40  med→hard   36  acc 90.8%
+  seed 101  easy→med   45  med→hard    9  acc 91.4%
+  seed 102  easy→med   40  med→hard    7  acc 90.4%
+  seed 103  easy→med   44  med→hard   16  acc 91.3%
+  seed 104  easy→med   41  med→hard   32  acc 91.3%
+  seed 105  easy→med   48  med→hard   20  acc 91.1%
+  seed 106  easy→med   45  med→hard   17  acc 91.6%
+  seed 107  easy→med   49  med→hard   23  acc 90.7%
+  seed 108  easy→med   45  med→hard   26  acc 90.8%
+  seed 109  easy→med   49  med→hard   25  acc 91.1%
+
+  Easy→Medium  42.5 ± 5.4
+  Medium→Hard  21.4 ± 9.9
+  Ratio        0.50×   bootstrap 95% CI [0.40, 0.61]  (median 0.50)
+  Consistent   1/20 seeds (hard > easy)
+  Paired t     t=-7.910  p=0.0000
+  Wilcoxon     p=0.0001
+  Cohen's d    -1.769
+  Shapiro-Wilk on differences: p=0.6666  (normal-ish, trust t-test)
+  Accuracy     91.07 ± 0.31%
+
+  [svhn instr] seed  42 td={'Easy': 75, 'Medium': 48, 'Hard': 31} acc 91.4%
+  [svhn instr] seed   7 td={'Easy': 78, 'Medium': 34, 'Hard': 27} acc 91.0%
+  [svhn instr] seed 123 td={'Easy': 76, 'Medium': 48, 'Hard': 32} acc 91.1%
+  [svhn instr] seed   0 td={'Easy': 82, 'Medium': 43, 'Hard': 10} acc 91.4%
+  [svhn instr] seed  99 td={'Easy': 58, 'Medium': 41, 'Hard': 33} acc 91.2%
+  [svhn instr] seed  11 td={'Easy': 75, 'Medium': 32, 'Hard': 34} acc 91.1%
+  [svhn instr] seed  22 td={'Easy': 81, 'Medium': 35, 'Hard': 24} acc 90.6%
+  [svhn instr] seed  33 td={'Easy': 73, 'Medium': 34, 'Hard': 4} acc 90.9%
+  [svhn instr] seed  44 td={'Easy': 78, 'Medium': 50, 'Hard': 8} acc 90.7%
+  [svhn instr] seed  55 td={'Easy': 72, 'Medium': 40, 'Hard': 15} acc 91.1%
+  [svhn instr] seed 100 td={'Easy': 65, 'Medium': 40, 'Hard': 36} acc 90.8%
+  [svhn instr] seed 101 td={'Easy': 71, 'Medium': 45, 'Hard': 9} acc 91.4%
+  [svhn instr] seed 102 td={'Easy': 76, 'Medium': 40, 'Hard': 7} acc 90.4%
+  [svhn instr] seed 103 td={'Easy': 68, 'Medium': 44, 'Hard': 16} acc 91.3%
+  [svhn instr] seed 104 td={'Easy': 78, 'Medium': 41, 'Hard': 32} acc 91.3%
+  [svhn instr] seed 105 td={'Easy': 80, 'Medium': 48, 'Hard': 20} acc 91.1%
+  [svhn instr] seed 106 td={'Easy': 74, 'Medium': 45, 'Hard': 17} acc 91.6%
+  [svhn instr] seed 107 td={'Easy': 78, 'Medium': 49, 'Hard': 23} acc 90.7%
+  [svhn instr] seed 108 td={'Easy': 70, 'Medium': 45, 'Hard': 26} acc 90.8%
+  [svhn instr] seed 109 td={'Easy': 80, 'Medium': 49, 'Hard': 25} acc 91.1%
+DONE svhn
