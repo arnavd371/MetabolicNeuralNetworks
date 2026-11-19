@@ -1,0 +1,16 @@
+# Versions used for the reproduction (Kaggle, NVIDIA Tesla T4, driver 580.178).
+# Python 3.13.15; cuDNN 9.19 (bundled with the torch cu128 wheel).
+# Seed-level agreement was exact with these versions on a T4; other GPUs or
+# versions may differ at the seed level.
+# For the CUDA 12.8 build of torch/torchvision:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0
+torchvision==0.26.0
+numpy==2.1.3
+scipy==1.16.3
+matplotlib==3.10.0
+pandas==2.3.3
+# used only by scripts/analyze*.py to write markdown tables (version from the analysis machine)
+tabulate==0.10.0
+# optional: only for scripts/build_kernels.py / pushing Kaggle kernels
+# kaggle
